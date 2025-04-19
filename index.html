@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChronoHack - Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      color: #00ffe7;
+      background: radial-gradient(ellipse at center, #0f0f0f 0%, #010101 100%);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu {
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00ffe7;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffe7;
+      text-align: center;
+      position: relative;
+    }
+
+    .menu h1 {
+      font-size: 3em;
+      margin-bottom: 40px;
+      letter-spacing: 2px;
+      text-shadow: 0 0 5px #00ffe7;
+    }
+
+    .menu button {
+      background: transparent;
+      border: 2px solid #00ffe7;
+      color: #00ffe7;
+      font-size: 1.2em;
+      padding: 10px 30px;
+      margin: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu button:hover {
+      background-color: #00ffe7;
+      color: #000;
+      box-shadow: 0 0 15px #00ffe7;
+    }
+
+    .glitch {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background: repeating-linear-gradient(0deg, rgba(0,255,231,0.05) 0px, rgba(0,255,231,0.05) 1px, transparent 1px, transparent 2px);
+      animation: glitchMove 1s infinite linear;
+      z-index: -1;
+    }
+
+    @keyframes glitchMove {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <h1>ChronoHack</h1>
+    <button onclick="startGame()">Nouvelle Partie</button>
+    <button onclick="loadGame()">Charger</button>
+    <button onclick="openOptions()">Options</button>
+    <button onclick="showCredits()">Crédits</button>
+  </div>
+  <div class="glitch"></div>
+
+  <script>
+    function startGame() {
+      alert("Démarrage d'une nouvelle partie...");
+    }
+    function loadGame() {
+      alert("Chargement des données...");
+    }
+    function openOptions() {
+      alert("Menu des options ouvert.");
+    }
+    function showCredits() {
+      alert("Créé par Toi & l'Architecte du Réel.");
+    }
+  </script>
+</body>
+</html>
